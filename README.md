@@ -38,8 +38,12 @@ Varje DS18B20 temperatursensor har en unik 64-bitars seriell kod. Detta gör att
 3. Skapa en Cosmos DB-databas och konfigurera din Azure IoT-hubb att skicka data till den.
 4. Logga in ditt Azure konto i Power BI för att visualisera data från Cosmos DB.
 
+## PowerBi
 
-Flödesschema:
+<img src="powerBi.png" width="600"/>
+
+
+## Flödesschema
 
 <img src="flowchart.png" width="600"/>
  
