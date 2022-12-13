@@ -18,7 +18,7 @@ För att kunna använda detta projekt behöver du följande:
 - En DS18B20-temperaturgivare
 - En Azure IoT-hubb
 - En Cosmos DB-databas
-- Power BI
+- PowerBi
 
 ## Tillvägagångssätt:
 Sensor placeras i kylskåpet och skickas in genom att. 
@@ -38,12 +38,12 @@ Varje DS18B20 temperatursensor har en unik 64-bitars seriell kod. Detta gör att
 3. Skapa en Cosmos DB-databas och konfigurera din Azure IoT-hubb att skicka data till den.
 4. Logga in ditt Azure konto i Power BI för att visualisera data från Cosmos DB.
 
-## PowerBi
+## PowerBi:
 
-<img src="powerBi.png" width="600"/>
+<img src="PowerBi.png" width="600"/>
 
 
-## Flödesschema
+## Flödesschema:
 
 <img src="flowchart.png" width="600"/>
  
