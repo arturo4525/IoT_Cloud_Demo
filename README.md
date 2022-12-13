@@ -34,9 +34,9 @@ Varje DS18B20 temperatursensor har en unik 64-bitars seriell kod. Detta gör att
 <img src="esp32.png" width="600"/>
 	
 1. Anslut DS18B20-givaren till ESP32-enheten enligt instruktionerna i givarens dokumentation.
-2. Anslut ESP32-enheten till ditt lokala nätverk och konfigurera den att ansluta till din Azure IoT-hubb.
+2. Anslut ESP32-enheten till ditt lokala nätverk och konfigurera den för att ansluta till din Azure IoT-hubb.
 3. Skapa en Cosmos DB-databas och konfigurera din Azure IoT-hubb att skicka data till den.
-4. Använd Power BI för att visualisera data från Cosmos DB.
+4. Logga in ditt Azure konto i Power BI för att visualisera data från Cosmos DB.
 
 
 Flödesschema:
@@ -54,14 +54,12 @@ Flödesschema:
 
 - IoT Hub – Azure
 
-- MongoDB atlas – Multi – cloud databas service. Förenklar bade utrullningen/deploy:andet och hur man hanterar sin databas on-demand. När man än kan tänkas behöva det.
-I detta fallet så hämtar jag datat från IoT hubben som skickades ifrån espn32. 
+- Cosmos DB för att lagra datan via Warm path
 
 - Power Bi – Datavisulisering, bi vertyg. Här väljer jag PowerBi för att visualisera min data för att kunna tolka dem värdena som jag har på ett snyggt och enkelt sätt.
 
-- Smhi – Här väljer jag att hämta data från SMHI för att se det går att hämta ut det till mongodbatlas. Detta för att ha ett liknande dataunderlagt då de består av temperatur och det är något jag mäter/använder mig utav i detta projekt.
+- Smhi – Här väljer jag att hämta data från SMHI i Cold path format.. Detta för att ha ett liknande dataunderlagt då de består av temperatur och det är något jag mäter/använder mig utav i detta projekt.
 
-- Blob storage – Container, för att långtidsspara min data.
 
 ## Avslutning
 Med hjälp av detta projekt kan du enkelt mäta temperaturen i ett kylskåp och spara data till molnet. Detta kan användas för att övervaka temperaturen i kylskåpet och förhindra att livsmedel blir dåliga.
